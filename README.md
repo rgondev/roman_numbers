@@ -9,3 +9,7 @@ Import in your favorite IDE and run that failing test to see that all is working
 Includes a KataBootstrapRubyTest example (similar to the one that Ruby includes by default)
 
 Based [Antonio de la Torre's work] (https://github.com/adelatorrefoss/kata-bootstrap-java).
+
+## Exercise doing with TDD doing Pair Programming
+
+http://codingdojo.org/kata/RomanNumerals/
