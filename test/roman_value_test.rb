@@ -4,8 +4,8 @@ require_relative '../app/roman_number'
 module Test
   class RomanValueTest < Test::Unit::TestCase
 
-    def test_to_roman_method
-     [[1,   "I"],
+    CASES = [
+      [1,   "I"],
       [2,   "II"],
       [3,   "III"],
       [4,   "IV"],
@@ -13,8 +13,16 @@ module Test
       [45,  "XLV"],
       [289, "CCLXXXIX"],
       [499, "CDXCIX"],
-      [547, "DXLVII"]].each do |key|
-        assert RomanNumber.new(key.first).to_roman == key.last
+      [547, "DXLVII"],
+      [879, "DCCCLXXIX"],
+      [979, "CMLXXIX"],
+      [1984, "MCMLXXXIV"],
+      [2018, "MMXVIII"]
+    ]
+
+    CASES.each do |int,roman|
+      define_method "test_#{int}" do
+        assert_equal roman, RomanNumber.new(int).to_roman
       end
     end
   end
